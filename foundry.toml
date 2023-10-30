@@ -1,0 +1,11 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+remappings=["@chainlink/contracts=lib/chainlink-brownie-contracts/contracts/","@openzeppelin/contracts=lib/openzeppelin-contracts/contracts"]
+[invariant]
+runs = 128 #the more the number of runs the more its take time to execute
+depth = 128 #number of calls in a single run
+fail_on_revert = true #change to true-> its return fail for the invalid random number pass to a function as an argument. Change to false -> its does not return fail for invalid random argument  
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
